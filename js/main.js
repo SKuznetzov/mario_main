@@ -9,6 +9,8 @@ scene("game", () => {
 
 })
 
+start("game")
+
 
 
 
