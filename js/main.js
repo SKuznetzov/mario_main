@@ -3,7 +3,7 @@ kaboom({
     fullscreen: 1,
     scale: 1,
     debug: true,
-    clearColor: [0, 0, 0, 1],
+    background: [ 0, 0, 255, ],
 })
 
 loadSprite('coin', 'coin.png')
