@@ -23,7 +23,7 @@ scene("game", () => {
   layers(['bg', 'obj', 'ui'], 'obj')
 
 
-const map = [
+const gap = [
     [
       '                                      ',
       '                                      ',
@@ -56,7 +56,7 @@ const map = [
     '=': [sprite('block', solid())]
   }
   
-  const gameLevel = addLevel(map, levelCfg)
+  const gameLevel = addLevel(gap, levelCfg)
 })
 start("game")
 
