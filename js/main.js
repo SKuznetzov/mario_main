@@ -87,6 +87,10 @@ const gap =
     body(),
     origin('bot')
   ])
+
+  const MOVE_SPEED = 120
+
+  
 })
 go("game")
 
