@@ -6,6 +6,9 @@ kaboom({
     background: [ 0, 0, 255, ],
 })
 
+const MOVE_SPEED = 120
+const JUMP_FORCE =10
+
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
 loadSprite('brick', 'brick.png')
@@ -87,8 +90,6 @@ const gap =
     body(),
     origin('bot')
   ])
-
-  const MOVE_SPEED = 120
 
   keyDown('left', () => {
     player.move(-MOVE_SPEED, 0)
