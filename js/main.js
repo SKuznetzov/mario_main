@@ -68,7 +68,7 @@ const gap =
   
   const gameLevel = addLevel(gap, levelCfg)
 })
-start("game")
+go("game")
 
 
 
