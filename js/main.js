@@ -93,6 +93,10 @@ const gap =
   keyDown('left', () => {
     player.move(-MOVE_SPEED, 0)
   })
+
+  keyDown('right', () => {
+    player.move(MOVE_SPEED, 0)
+  })
 })
 go("game")
 
