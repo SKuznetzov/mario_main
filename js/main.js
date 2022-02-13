@@ -67,6 +67,15 @@ const gap =
   }
   
   const gameLevel = addLevel(gap, levelCfg)
+
+  add([text('level ' + 'test', pos(4,6))])
+
+  const player = add([
+    sprite('mario'),area(),solid(),
+    pos(30,0),
+    body(),
+    origin('bot')
+  ])
 })
 go("game")
 
