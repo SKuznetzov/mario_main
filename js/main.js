@@ -7,7 +7,7 @@ kaboom({
 })
 
 const MOVE_SPEED = 120
-const JUMP_FORCE = 260
+const JUMP_FORCE = 360
 
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
@@ -92,15 +92,15 @@ const gap =
   ])
 
   onKeyDown('left', () => {
-    player.move(-MOVE_SPEED, 0)
+    player.move(-MOVE_SPEED,0)
   })
 
   onKeyDown('right', () => {
-    player.move(MOVE_SPEED, 0)
+    player.move(MOVE_SPEED,0)
   })
 
   onKeyPress('space', () => {
-    if (player.grounded()) {
+    if (player.isGrounded()) {
       player.jump(JUMP_FORCE)
     }
   })
