@@ -53,7 +53,17 @@ const gap =
   const levelCfg = {
     width: 20,
     height: 20,
-    '=': [sprite('block', solid())]
+    '=': () => [sprite('brick'),area(),solid()],
+    '$': () => [sprite('coin'),area()],
+    '%': () => [sprite('surprise'),area(),solid(),'coin-surprise'],
+    '*': () => [sprite('surprise'),area(),solid(),'mushroom-surprise'],
+    '}': () => [sprite('unboxed'),area(),solid()],
+    '(': () => [sprite('pipe-bottom-left'),area(),solid(),scale(0.5)],
+    ')': () => [sprite('pipe-bottom-right'),area(),solid(),scale(0.5)],
+    '-': () => [sprite('pipe-top-left'),area(),solid(),scale(0.5)],
+    '+': () => [sprite('pipe-top-right'),area(),solid(),scale(0.5)],
+    '^': () => [sprite('evil-shroom'),area(),solid()],
+    '#': () => [sprite('mushroom'),area(),solid()],
   }
   
   const gameLevel = addLevel(gap, levelCfg)
