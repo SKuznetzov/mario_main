@@ -7,7 +7,7 @@ kaboom({
 })
 
 const MOVE_SPEED = 120
-const JUMP_FORCE =10
+const JUMP_FORCE = 260
 
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
@@ -108,7 +108,7 @@ const gap =
 
 
 
-  
+
 })
 go("game")
 
