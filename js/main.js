@@ -91,15 +91,15 @@ const gap =
     origin('bot')
   ])
 
-  keyDown('left', () => {
+  onKeyDown('left', () => {
     player.move(-MOVE_SPEED, 0)
   })
 
-  keyDown('right', () => {
+  onKeyDown('right', () => {
     player.move(MOVE_SPEED, 0)
   })
 
-  keyPress('space', () => {
+  onKeyPress('space', () => {
     if (player.grounded()) {
       player.jump(JUMP_FORCE)
     }
