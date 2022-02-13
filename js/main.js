@@ -98,6 +98,17 @@ const gap =
   keyDown('right', () => {
     player.move(MOVE_SPEED, 0)
   })
+
+  keyPress('space', () => {
+    if (player.grounded()) {
+      player.jump(JUMP_FORCE)
+    }
+  })
+
+
+
+
+  
 })
 go("game")
 
