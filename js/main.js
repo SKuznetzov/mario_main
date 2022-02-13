@@ -68,6 +68,8 @@ const gap =
   
   const gameLevel = addLevel(gap, levelCfg)
 
+  let score = 0
+
   const scoreLabel = add([
     text(score),
     pos(30,6),
@@ -76,7 +78,7 @@ const gap =
       value: score,
     }
   ])
-  
+
   add([text('level ' + 'test', pos(4,6))])
 
   const player = add([
