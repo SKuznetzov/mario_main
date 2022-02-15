@@ -57,7 +57,7 @@ const gap =
     width: 20,
     height: 20,
     '=': () => [sprite('brick'),area(),solid()],
-    '$': () => [sprite('coin'),area()],
+    '$': () => [sprite('coin'),area(),'coin'],
     '%': () => [sprite('surprise'),area(),solid(),'coin-surprise'],
     '*': () => [sprite('surprise'),area(),solid(),'mushroom-surprise'],
     '}': () => [sprite('unboxed'),area(),solid()],
@@ -141,6 +141,8 @@ const gap =
     destroy(m)
     player.biggify(6)
   })
+
+  player.collides('coin')
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
