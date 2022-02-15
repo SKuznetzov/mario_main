@@ -142,7 +142,12 @@ const gap =
     player.biggify(6)
   })
 
-  player.collides('coin')
+  player.collides('coin', (c) => {
+    destroy(c)
+    scoreLabel.value++
+    scoreLabel.text = scoreLabel.value
+  })
+
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
