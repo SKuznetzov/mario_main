@@ -136,6 +136,11 @@ const gap =
       gameLevel.spawn('}', obj.gridPos.sub(0, 0))
     }
   })
+
+  player.collides('mushroom', (m) => {
+    destroy(m)
+    player.biggify(6)
+  })
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
