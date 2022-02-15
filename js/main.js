@@ -120,7 +120,7 @@ const gap =
     origin('bot')
   ])
 
-  action('mushroom', (m) => {
+  onUpdate('mushroom', (m) => {
     m.move(10,0)
   })
 
@@ -137,12 +137,12 @@ const gap =
     }
   })
 
-  player.collides('mushroom', (m) => {
+  player.onCollide('mushroom', (m) => {
     destroy(m)
     player.biggify(6)
   })
 
-  player.collides('coin', (c) => {
+  player.onCollide('coin', (c) => {
     destroy(c)
     scoreLabel.value++
     scoreLabel.text = scoreLabel.value
