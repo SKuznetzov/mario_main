@@ -66,7 +66,7 @@ const gap =
     '-': () => [sprite('pipe-top-left'),area(),solid(),scale(0.5)],
     '+': () => [sprite('pipe-top-right'),area(),solid(),scale(0.5)],
     '^': () => [sprite('evil-shroom'),area(),solid()],
-    '#': () => [sprite('mushroom'),area(),solid()],
+    '#': () => [sprite('mushroom'),area(),solid(),'mushroom',body()],
   }
   
   const gameLevel = addLevel(gap, levelCfg)
@@ -120,9 +120,18 @@ const gap =
     origin('bot')
   ])
 
+  action('mushroom', (m) => {
+    m.move(10,0)
+  })
+
   player.on("headbump", (obj) => {
     if (obj.is('coin-surprise')) {
       gameLevel.spawn('$', obj.gridPos.sub(0,1))
+      destroy(obj)
+      gameLevel.spawn('}', obj.gridPos.sub(0, 0))
+    }
+    if (obj.is('mushroom-surprise')) {
+      gameLevel.spawn('#', obj.gridPos.sub(0,1))
       destroy(obj)
       gameLevel.spawn('}', obj.gridPos.sub(0, 0))
     }
