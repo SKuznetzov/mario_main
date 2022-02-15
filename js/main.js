@@ -120,6 +120,12 @@ const gap =
     origin('bot')
   ])
 
+  player.on("headbump", (obj) => {
+    if (obj.is('coin-surprise')) {
+      gameLevel.spawn('$', obj.gridPos.sub(0,1))
+      destroy(obj)
+    }
+  })
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
