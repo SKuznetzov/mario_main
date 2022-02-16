@@ -58,7 +58,7 @@ const gap =
     height: 20,
     '=': () => [sprite('brick'),area(),solid()],
     '$': () => [sprite('coin'),area(),'coin'],
-    '%': () => [sprite('surprise'),area(),solid(),'coin-surprise'],
+    '%': () => [sprite('surprise'),area(),solid(),'coin-surprise','headbumn'],
     '*': () => [sprite('surprise'),area(),solid(),'mushroom-surprise'],
     '}': () => [sprite('unboxed'),area(),solid()],
     '(': () => [sprite('pipe-bottom-left'),area(),solid(),scale(0.5)],
