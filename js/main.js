@@ -59,7 +59,7 @@ const gap =
     '=': () => [sprite('brick'),area(),solid()],
     '$': () => [sprite('coin'),area(),'coin'],
     '%': () => [sprite('surprise'),area(),solid(),'coin-surprise','headbump'],
-    '*': () => [sprite('surprise'),area(),solid(),'mushroom-surprise'],
+    '*': () => [sprite('surprise'),area(),solid(),'mushroom-surprise','headbump'],
     '}': () => [sprite('block'),area(),solid()],
     '(': () => [sprite('pipe-bottom-left'),area(),solid(),scale(0.5)],
     ')': () => [sprite('pipe-bottom-right'),area(),solid(),scale(0.5)],
@@ -130,23 +130,23 @@ const gap =
       destroy(obj)
       gameLevel.spawn('}', obj.gridPos.sub(0, 0))
     }
-    // if (obj.is('mushroom-surprise')) {
-    //   gameLevel.spawn('#', obj.gridPos.sub(0,1))
-    //   destroy(obj)
-    //   gameLevel.spawn('}', obj.gridPos.sub(0, 0))
-    // }
+    if (obj.is('mushroom-surprise')) {
+      gameLevel.spawn('#', obj.gridPos.sub(0,1))
+      destroy(obj)
+      gameLevel.spawn('}', obj.gridPos.sub(0, 0))
+    }
   })
 
-  // player.onCollide('mushroom', (m) => {
-  //   destroy(m)
-  //   player.biggify(6)
-  // })
+  player.onCollide('mushroom', (m) => {
+    destroy(m)
+    player.biggify(6)
+  })
 
-  // player.onCollide('coin', (c) => {
-  //   destroy(c)
-  //   scoreLabel.value++
-  //   scoreLabel.text = scoreLabel.value
-  // })
+  player.onCollide('coin', (c) => {
+    destroy(c)
+    scoreLabel.value++
+    scoreLabel.text = scoreLabel.value
+  })
 
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
