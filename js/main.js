@@ -11,6 +11,7 @@ const JUMP_FORCE = 360
 const BIG_JUMP_FORCE = 550
 let CURRENT_JUMP_FORCE = JUMP_FORCE
 let isJumping = true
+const FALL_DEATH = 400
 
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
@@ -157,6 +158,13 @@ const gap =
   onUpdate('dangerous', (d) => {
     d.move(-ENEMY_SPEED,0)
   })
+  
+  player.onUpdate(() => {
+    camPos(player.pos)
+    if (player.pos.y >= FALL_DEATH) {
+    go('lose', {score: scoreLabel.value})
+    }
+  })
   player.onCollide('dangerous', (d) => {
     if (isJumping) {
       destroy(d)
@@ -164,6 +172,7 @@ const gap =
     go('lose', {score: scoreLabel.value})
     }
   })
+
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
