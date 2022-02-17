@@ -67,7 +67,7 @@ const gap =
     ')': () => [sprite('pipe-bottom-right'),area(),solid(),scale(0.5)],
     '-': () => [sprite('pipe-top-left'),area(),solid(),scale(0.5)],
     '+': () => [sprite('pipe-top-right'),area(),solid(),scale(0.5)],
-    '^': () => [sprite('evil-shroom'),area(),solid()],
+    '^': () => [sprite('evil-shroom'),area(),solid(),'dangerous'],
     '#': () => [sprite('mushroom'),area(),solid(),'mushroom',body()],
   }
   
