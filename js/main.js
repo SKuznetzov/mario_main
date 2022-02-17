@@ -177,7 +177,7 @@ const gap =
 scene('lose', ({score}) => {
   add([text(score,32), origin('center'),pos(width()/2,height()/2)])
 })
-go("game")
+go("game",{score: 0})
 
 
 
