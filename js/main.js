@@ -125,7 +125,7 @@ const gap =
   ])
 
   onUpdate('mushroom', (m) => {
-    m.move(10,0)
+    m.move(20,0)
   })
 
   player.onCollide("headbump", (obj) => {
