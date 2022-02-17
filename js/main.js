@@ -124,7 +124,7 @@ const gap =
     m.move(10,0)
   })
 
-  player.on("headbump", (obj) => {
+  player.onCollide("headbump", (obj) => {
     if (obj.is('coin-surprise')) {
       gameLevel.spawn('$', obj.gridPos.sub(0,1))
       destroy(obj)
