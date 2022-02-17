@@ -24,7 +24,7 @@ loadSprite('pipe-top-right', 'pipe-top-right.png')
 loadSprite('pipe-bottom-left', 'pipe-bottom-left.png')
 loadSprite('pipe-bottom-right', 'pipe-bottom-right.png')
 
-scene("game", () => {
+scene("game", ({score}) => {
   layers(['bg', 'obj', 'ui'], 'obj')
 
 
