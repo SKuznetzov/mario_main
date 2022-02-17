@@ -168,6 +168,12 @@ const gap =
     player.move(MOVE_SPEED,0)
   })
 
+  player.onUpdate(()=> {
+    if (player.isGrounded()) {
+      isJumping = false
+    }
+  })
+
   onKeyPress('space', () => {
     if (player.isGrounded()) {
       isJumping = true
