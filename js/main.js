@@ -92,6 +92,7 @@ const gap =
     return {
       update() {
         if (isBig) {
+          CURRENT_JUMP_FORCE = BIG_JUMP_FORCE
           timer -=dt()
           if (timer <= 0) {
             this.smallify()
