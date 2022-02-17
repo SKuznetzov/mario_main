@@ -92,6 +92,7 @@ const gap =
     return {
       update() {
         if (isBig) {
+          CURRENT_JUMP_FORCE = BIG_JUMP_FORCE
           timer -=dt()
           if (timer <= 0) {
             this.smallify()
@@ -109,7 +110,6 @@ const gap =
       },
       biggify(time) {
         this.scale = vec2(2)
-        CURRENT_JUMP_FORCE = BIG_JUMP_FORCE
         timer = time
         isBig = true
       }
@@ -152,6 +152,9 @@ const gap =
     scoreLabel.text = scoreLabel.value
   })
 
+  player.onCollide('dangerous', (d) => {
+    go('lose', {score: scoreLabel.value})
+  })
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
@@ -162,14 +165,13 @@ const gap =
 
   onKeyPress('space', () => {
     if (player.isGrounded()) {
-      player.jump(JUMP_FORCE)
+      player.jump(CURRENT_JUMP_FORCE)
     }
   })
+})
 
-
-
-
-
+scene('lose', ({score}) => {
+  add([text(score,32), origin('center'),pos(width()/2,height()/2)])
 })
 go("game")
 
