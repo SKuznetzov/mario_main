@@ -151,7 +151,11 @@ const gap =
     scoreLabel.value++
     scoreLabel.text = scoreLabel.value
   })
-
+  
+  const ENEMY_SPEED = 20
+  onUpdate('dangerous', (d) => {
+    d.move(-ENEMY_SPEED,0)
+  })
   player.onCollide('dangerous', (d) => {
     go('lose', {score: scoreLabel.value})
   })
