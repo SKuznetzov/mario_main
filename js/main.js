@@ -158,7 +158,11 @@ const gap =
     d.move(-ENEMY_SPEED,0)
   })
   player.onCollide('dangerous', (d) => {
+    if (isJumping) {
+      destroy(d)
+    } else {
     go('lose', {score: scoreLabel.value})
+    }
   })
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
