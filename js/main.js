@@ -8,6 +8,7 @@ kaboom({
 
 const MOVE_SPEED = 120
 const JUMP_FORCE = 360
+let CURRENT_JUMP_FORCE = JUMP_FORCE
 
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
@@ -120,9 +121,9 @@ const gap =
     origin('bot')
   ])
 
-  // onUpdate('mushroom', (m) => {
-  //   m.move(10,0)
-  // })
+  onUpdate('mushroom', (m) => {
+    m.move(10,0)
+  })
 
   player.onCollide("headbump", (obj) => {
     if (obj.is('coin-surprise')) {
