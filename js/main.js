@@ -10,7 +10,7 @@ const MOVE_SPEED = 120
 const JUMP_FORCE = 360
 const BIG_JUMP_FORCE = 550
 let CURRENT_JUMP_FORCE = JUMP_FORCE
-const isJumping = true
+let isJumping = true
 
 loadSprite('coin', 'coin.png')
 loadSprite('evil-shroom','evel-shroom.png')
