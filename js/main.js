@@ -159,12 +159,7 @@ const gap =
     d.move(-ENEMY_SPEED,0)
   })
   
-  player.onUpdate(() => {
-    camPos(player.pos)
-    if (player.pos.y >= FALL_DEATH) {
-    go('lose', {score: scoreLabel.value})
-    }
-  })
+
   player.onCollide('dangerous', (d) => {
     if (isJumping) {
       destroy(d)
@@ -172,7 +167,14 @@ const gap =
     go('lose', {score: scoreLabel.value})
     }
   })
-
+  
+  player.onUpdate(() => {
+    camPos(player.pos)
+    if (player.pos.y >= FALL_DEATH) {
+    go('lose', {score: scoreLabel.value})
+    }
+  })
+  
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
