@@ -174,7 +174,15 @@ const gap =
     go('lose', {score: scoreLabel.value})
     }
   })
-  
+
+  player.onCollide('pipe', () => {
+    keyPress('down', () =>{
+      go('game', {
+        level: (level + 1)
+        score: scoreLabel.value
+      })
+    })
+  })
   onKeyDown('left', () => {
     player.move(-MOVE_SPEED,0)
   })
