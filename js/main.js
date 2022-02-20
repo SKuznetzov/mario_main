@@ -86,7 +86,7 @@ const gap =
     }
   ])
 
-  add([text('level ' + 'test', pos(4,6))])
+  add([text('level ' + parseInt((level + 1)), pos(4,6))])
 
   function big() {
     let timer = 0
