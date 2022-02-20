@@ -176,7 +176,7 @@ const gap =
   })
 
   player.onCollide('pipe', () => {
-    keyPress('down', () =>{
+    onKeyPress('down', () =>{
       go('game', {
         level: (level + 1),
         score: scoreLabel.value
