@@ -26,7 +26,7 @@ loadSprite('pipe-top-right', 'pipe-top-right.png')
 loadSprite('pipe-bottom-left', 'pipe-bottom-left.png')
 loadSprite('pipe-bottom-right', 'pipe-bottom-right.png')
 
-scene("game", ({score}) => {
+scene("game", ({ level,score}) => {
   layers(['bg', 'obj', 'ui'], 'obj')
 
 
@@ -208,7 +208,7 @@ const gap =
 scene('lose', ({score}) => {
   add([text(score,32), origin('center'),pos(width()/2,height()/2)])
 })
-go("game",{score: 0})
+go("game",{ level: 0, score: 0})
 
 
 
