@@ -78,6 +78,12 @@ const gaps =
     '+': () => [sprite('pipe-top-right'),area(),solid(),scale(0.5),'pipe'],
     '^': () => [sprite('evil-shroom'),area(),solid(),'dangerous'],
     '#': () => [sprite('mushroom'),area(),solid(),'mushroom',body()],
+    '!': () => [sprite('blue-block'),area(),solid(),scale(0.5)],
+    '£': () => [sprite('blue-brick'),area(),solid(),scale(0.5)],
+    'z': () => [sprite('blue-evil-shroom'),area(),solid(),scale(0.5),'dangerous'],
+    '@': () => [sprite('blue-surprise'),area(),solid(),scale(0.5),'coin-surprise'],
+    'x': () => [sprite('blue-steel'),area(),solid(),scale(0.5)],
+
   }
   
   const gameLevel = addLevel(gaps[level], levelCfg)
