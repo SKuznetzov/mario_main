@@ -26,10 +26,10 @@ loadSprite('pipe-top-right', 'pipe-top-right.png')
 loadSprite('pipe-bottom-left', 'pipe-bottom-left.png')
 loadSprite('pipe-bottom-right', 'pipe-bottom-right.png')
 
-loadSprite('blue-block', 'surprise.png')
-loadSprite('blue-brick', 'surprise.png')
-loadSprite('blue-steel', 'surprise.png')
-loadSprite('blue-evel-shroom', 'surprise.png')
+loadSprite('blue-block', 'blue-block.png')
+loadSprite('blue-brick', 'blue-brick.png')
+loadSprite('blue-steel', 'blue-steel.png')
+loadSprite('blue-evil-shroom', 'blue-evil-shroom.png')
 loadSprite('blue-surprise', 'surprise.png')
 
 
