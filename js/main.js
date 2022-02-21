@@ -30,7 +30,7 @@ scene("game", ({ level,score}) => {
   layers(['bg', 'obj', 'ui'], 'obj')
 
 
-const gap = 
+const gaps = 
       [
     '                                      ',
     '                                      ',
@@ -73,7 +73,7 @@ const gap =
     '#': () => [sprite('mushroom'),area(),solid(),'mushroom',body()],
   }
   
-  const gameLevel = addLevel(gap, levelCfg)
+  const gameLevel = addLevel(gaps, levelCfg)
 
   
 
@@ -86,7 +86,7 @@ const gap =
     }
   ])
 
-  add([text('level ' + parseInt((level + 1)), pos(4,6))])
+  add([text('level ' + parseInt((level + 1)), pos(40,6))])
 
   function big() {
     let timer = 0
