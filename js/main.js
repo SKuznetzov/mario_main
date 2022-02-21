@@ -73,7 +73,7 @@ const gaps =
     '#': () => [sprite('mushroom'),area(),solid(),'mushroom',body()],
   }
   
-  const gameLevel = addLevel(gaps, levelCfg)
+  const gameLevel = addLevel(gaps[level], levelCfg)
 
   
 
